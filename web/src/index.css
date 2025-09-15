@@ -1,0 +1,16 @@
+:root {
+  --card-color: #0a0a0a;
+  --text-color: #fafafa;
+  color: var(--text-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--card-color);
+}

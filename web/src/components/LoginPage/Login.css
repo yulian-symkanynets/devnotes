@@ -1,0 +1,33 @@
+:root {
+    --login-bg: var(--card-color);
+    --login-text: #333;
+    --login-border: #ccc;
+    --border: rgba(255,255,255,0.08);
+    --text-color: #fafafa; 
+}
+
+
+.login-page {
+    display: flex;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 20px;
+    border: 2px solid var(--border) ;
+    background-color: var(--login-bg);
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.login-title{
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+.login-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

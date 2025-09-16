@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/user")
 public class UserController {
     private final UserService userService;
 
@@ -24,4 +25,15 @@ public class UserController {
     public User addUser(@RequestBody User user) {
         return userService.saveUser(user);
     }
+
+    @RequestMapping(value="/login", method = RequestMethod.GET)
+    public boolean login(@RequestParam String username, @RequestParam String password) {
+        return userService.login(username, password);
+    }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.PUT)
+    public boolean deleteUser() {
+        return userService.delete();
+    }
+
 }

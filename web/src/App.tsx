@@ -13,6 +13,8 @@ function App() {
 
   const [snippet, setSnippets] = useState<SnippetCardProps[]>([])
   const [username, setUsername] = useState<string>("")
+
+  
   // Example: Fetch snippets from API (should be inside useEffect, not directly in component body)
   
   useEffect(() => {

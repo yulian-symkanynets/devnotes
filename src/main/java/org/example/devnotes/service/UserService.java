@@ -21,4 +21,14 @@ public class UserService {
     public User saveUser(User user) {
         return userRepository.save(user);
     }
+
+    public boolean login(String username, String password) {
+        User user = userRepository.findByUsername(username);
+        return user.getPassword().equals(password);
+    }
+
+    public boolean delete(){
+        userRepository.deleteAll();
+        return true;
+    }
 }
